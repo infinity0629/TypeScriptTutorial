@@ -8,7 +8,7 @@ const result = generateError("An error occurred!", 500); // { message: 'An error
 console.log(result); // result 没有输出
 
 /**
- * 死循环的函数返回 never 类型
+ * 无限循环函数返回 never 类型
  */
 const runloop = () => {
   while (true) {}

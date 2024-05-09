@@ -26,9 +26,6 @@ const accounting = new Department("d1", "Accounting");
 
 accounting.addEmployee("Max");
 accounting.addEmployee("Manu");
-
-// accounting.employees[2] = "Anna"; // error TS2341: Property 'employees' is private and only accessible within class 'Department'.
-
 accounting.printEmployeeInfomation();
 // 2
 // [ 'Max', 'Manu' ]

@@ -4,7 +4,14 @@ class Department {
   constructor(n: string) {
     this.name = n;
   }
+
+  describe() {
+    console.log(`Department: ${this.name}`);
+  }
 }
 
 const accounting = new Department("Accounting");
-console.log(accounting); // Department { name: 'Accounting' }
+accounting.describe(); // Department: Accounting
+
+const accountingCopy = { describe: accounting.describe };
+accountingCopy.describe(); // Department: undefined

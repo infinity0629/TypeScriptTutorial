@@ -9,14 +9,14 @@
  * 总之，将装饰器设计成工厂函数可以提高其灵活性、可配置性和可复用性，使其更加适用于不同的场景和需求。
  */
 
-const Logger = () => {
+const Logger = (loggingString: string) => {
   return (constructor: Function) => {
-    console.log("Logging...");
+    console.log(loggingString);
     console.log(constructor);
   };
 };
 
-@Logger()
+@Logger("LOGGING - PERSON")
 class Person {
   name = "Max";
 
@@ -28,7 +28,7 @@ class Person {
 const person = new Person();
 console.log(person);
 
-// Logging...
+// LOGGING - PERSON
 // [Function: Person]
 // Creating person object...
 // Person { name: 'Max' }

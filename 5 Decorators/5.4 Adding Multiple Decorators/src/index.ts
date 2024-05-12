@@ -51,21 +51,3 @@ class Person {
 // Creating person object...
 // LOGGING
 // [Function: Person]
-
-const FirstDecorator = () => {
-  console.log("FirstDecorator factory called");
-  return (target: any) => {
-    console.log("FirstDecorator applied to", target);
-  };
-};
-
-const SecondDecorator = () => {
-  console.log("SecondDecorator factory called");
-  return (target: any) => {
-    console.log("SecondDecorator applied to", target);
-  };
-};
-
-@FirstDecorator()
-@SecondDecorator()
-class MyClass {}

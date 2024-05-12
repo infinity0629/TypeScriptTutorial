@@ -27,5 +27,6 @@ class Person {
 }
 
 console.log(dom.serialize());
+
 // Creating person object...
 // <!DOCTYPE html><html><head></head><body><div id="app"><h1>Max</h1></div></body></html>
